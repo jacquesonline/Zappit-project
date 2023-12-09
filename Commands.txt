@@ -9,5 +9,11 @@ py manage.py createsuperuser
 py manage.py runserver
 curl http://localhost:8000/api/posts/
 curl -X 'POST' 'http://localhost:8000/api/posts/' -H 'Content-Type: application/json' -u 'zappit:zappit' -d $'{ "title": "Jacques curls", "url": "http://jacquesonline.com" }'
-
-
+echo "# Zappit-project by Jacques again" >> README.md
+  git init
+  git add .
+  git commit -m "First commit"
+  git branch -M main
+  git remote add origin git@github.com:jacquesonline/Zappit-project.git
+  git push -u origin main
+git status
