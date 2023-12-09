@@ -1,0 +1,13 @@
+django-admin startproject zappit
+mv zappit zappit-project
+cd zappit-project
+py manage.py startapp posts
+py manage.py makemigrations
+py manage.py migrate
+pip install djangorestframework
+py manage.py createsuperuser
+py manage.py runserver
+curl http://localhost:8000/api/posts/
+curl -X 'POST' 'http://localhost:8000/api/posts/' -H 'Content-Type: application/json' -u 'zappit:zappit' -d $'{ "title": "Jacques curls", "url": "http://jacquesonline.com" }'
+
+
